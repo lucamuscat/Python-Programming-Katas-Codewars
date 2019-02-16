@@ -1,0 +1,13 @@
+minute = 60
+hour = minute * 60
+day = hour * 24
+year = day * 365
+
+ranking = [0,minute, hour, day, year]
+
+def determine_format(seconds):	
+	for i in range(0,3):
+		if ranking[i] < seconds < ranking[i+1] :
+                    print("{} < {} < {}".format(str(ranking[i]),str(seconds),str(ranking[i+1])))
+
+determine_format(3750)	
