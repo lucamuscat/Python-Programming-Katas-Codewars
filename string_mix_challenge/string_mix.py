@@ -12,7 +12,7 @@ def mix(s1=None, s2=None):
     tallied_s1_dict = {k: v for k, v in tallied_s1}
     tallied_s2_dict = {k: v for k, v in tallied_s2}
 
-    max_values = max(tallied_s1_dict, tallied_s2_dict)
+    max_values = find_max(tallied_s1_dict, tallied_s2_dict)
 
     # Swap key with value
     transposed_max_values = transpose_dict(max_values)
@@ -22,7 +22,7 @@ def mix(s1=None, s2=None):
 def sanitize_chars(tallied_strings):
     return [i for i in tallied_strings if i[0].islower() and i[1] > 1]
 
-def max(s1_dict={}, s2_dict={}):
+def find_max(s1_dict={}, s2_dict={}):
     s1_key_set = {k for k in s1_dict.keys()}
     s2_key_set = {k for k in s2_dict.keys()}
 
